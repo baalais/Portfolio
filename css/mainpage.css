@@ -1,0 +1,123 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.fish-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url('../fish.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.fish {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+}
+
+.box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: rgba(41, 46, 49, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 70px;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  border-radius: 50%; /* Make the box round */
+}
+
+.box:hover {
+  transform: translateY(-10px);
+}
+
+.box .hidden-text {
+  display: none;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #2e3235;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.box:hover .hidden-text {
+  display: block;
+}
+
+.box a {
+  color: white;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.box a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(240, 240, 240, 0.8); /* Adjust the opacity (fourth value) as needed */
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-size: 18px;
+  color: #2a2f33;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .fish-container {
+    background-size: fixed;
+    background-position: center;
+  }
+
+  .box {
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+  }
+
+  .box .hidden-text {
+    font-size: 12px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
+
